@@ -10,13 +10,13 @@ import static org.hamcrest.Matchers.not;
 
 @CucumberContextConfiguration
 @SpringBootTest(
-        classes = Application.class,
+        classes = EmersonsGame.class,
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
         properties = {
                 "logging.pattern.console="
         }
 )
-class ApplicationTest {
+class EmersonsGameTests {
     @Test
     void contextLoads() {
         assertThat(true, not(equalTo(false)));
