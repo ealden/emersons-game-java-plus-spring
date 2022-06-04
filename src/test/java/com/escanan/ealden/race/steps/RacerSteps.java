@@ -1,7 +1,6 @@
 package com.escanan.ealden.race.steps;
 
 import com.escanan.ealden.race.Configurations;
-import com.escanan.ealden.race.EmersonsGame;
 import com.escanan.ealden.race.model.Race;
 import com.escanan.ealden.race.model.Racer;
 import com.escanan.ealden.race.model.SpeedType;
@@ -18,8 +17,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class RacerSteps {
-    private static EmersonsGame application;
-
     private RacePage page;
     private RaceService raceService;
 
@@ -30,10 +27,7 @@ public class RacerSteps {
 
     @Before
     public void setUp() {
-        if (application == null) {
-            application = new EmersonsGame();
-            application.startInTestMode();
-        }
+        Configurations.setTestMode(true);
     }
 
     @After

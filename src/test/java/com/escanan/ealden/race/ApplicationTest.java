@@ -9,7 +9,13 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.not;
 
 @CucumberContextConfiguration
-@SpringBootTest
+@SpringBootTest(
+        classes = Application.class,
+        webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
+        properties = {
+                "logging.pattern.console="
+        }
+)
 class ApplicationTest {
     @Test
     void contextLoads() {
