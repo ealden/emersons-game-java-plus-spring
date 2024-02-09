@@ -60,7 +60,7 @@ public abstract class BasePage {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(headless);
+        options.addArguments("--headless=new");
 
         return new ChromeDriver(options);
     }
