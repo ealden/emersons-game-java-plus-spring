@@ -9,7 +9,3 @@ This is based on the Java (Servlets) version, where we added Spring Boot in.
 ## Run acceptance tests
 
 `./gradlew test cucumber`
-
-## SonarQube
-
-https://sonarcloud.io/project/overview?id=ealden_emersons-game-java-plus-spring
