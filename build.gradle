@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '3.+'
     id 'io.spring.dependency-management' version '1.+'
     id 'war'
+    id 'jvm-test-suite'
 }
 
 group 'com.escanan.ealden.race'
@@ -41,8 +42,12 @@ java {
     sourceCompatibility = JavaLanguageVersion.of(21)
 }
 
-test {
-    useJUnitPlatform()
+testing {
+    suites {
+        test {
+            useJUnitJupiter()
+        }
+    }
 }
 
 tasks.register('cucumber', JavaExec) {
